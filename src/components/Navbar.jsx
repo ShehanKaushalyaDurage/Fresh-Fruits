@@ -30,41 +30,46 @@ const NavbarMenu = [
     link: "#",
   },
 ];
+
 const Navbar = () => {
+  const [open, setopen] = React.useState(false);
   return (
-    <nav>
-      <div className="container flex justify-between items-center py-4 md:pt-1">
-        {/* logo section */}
-        <div className="text-2xl flex items-center gap-2 font-bold uppercase">
-          <p className="text-primary ">Fruit</p>
-          <p className="text-secondary">Store</p>
-          <FaLeaf className="text-green-500" />
+    <>
+      <nav>
+        <div className="container flex justify-between items-center py-4 md:pt-1">
+          {/* logo section */}
+          <div className="text-2xl flex items-center gap-2 font-bold uppercase">
+            <p className="text-primary ">Fruit</p>
+            <p className="text-secondary">Store</p>
+            <FaLeaf className="text-green-500" />
+          </div>
+          {/* menu section */}
+          <div className="hidden md:block ">
+            <ul className="flex items-center gap-6 text-gray-600">
+              {NavbarMenu.map((menu) => (
+                <li key={menu.id}>
+                  <a
+                    href={menu.link}
+                    className="inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold"
+                  >
+                    {menu.title}
+                  </a>
+                </li>
+              ))}
+              <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
+                <MdOutlineShoppingCart />
+              </button>
+            </ul>
+          </div>
+          {/* Mobile Hamburger menu section */}
+          <div className="md:hidden">
+            <MdMenu className="text-4xl" />
+          </div>
         </div>
-        {/* menu section */}
-        <div className="hidden md:block ">
-          <ul className="flex items-center gap-6 text-gray-600">
-            {NavbarMenu.map((menu) => (
-              <li key={menu.id}>
-                <a
-                  href={menu.link}
-                  className="inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold"
-                >
-                  {menu.title}
-                </a>
-              </li>
-            ))}
-            <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
-              <MdOutlineShoppingCart />
-            </button>
-          </ul>
-        </div>
-        {/* Mobile Hamburger menu section */}
-        <div className="md:hidden">
-          <MdMenu className="text-4xl" />
-          <ResponsiveMenu />
-        </div>
-      </div>
-    </nav>
+      </nav>
+       {/* Mobile menu section */}
+      <ResponsiveMenu />
+    </>
   );
 };
 
