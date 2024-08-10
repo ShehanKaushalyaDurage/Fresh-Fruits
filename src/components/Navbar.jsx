@@ -39,7 +39,7 @@ const Navbar = () => {
           <p className="text-secondary">Store</p>
           <FaLeaf className="text-green-500" />
         </div>
-        {/* logo section */}
+        {/* menu section */}
         <div className="hidden md:block ">
           <ul className="flex items-center gap-6 text-gray-600">
             {NavbarMenu.map((menu) => (
@@ -54,6 +54,7 @@ const Navbar = () => {
             </button>
           </ul>
         </div>
+        {/* Mobile Hamburger menu section */}
       </div>
     </nav>
   );
