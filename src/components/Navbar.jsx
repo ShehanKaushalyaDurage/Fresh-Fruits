@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLeaf } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const NavbarMenu = [
   {
@@ -42,12 +43,15 @@ const Navbar = () => {
         <div className="hidden md:block ">
           <ul className="flex items-center gap-6 text-gray-600">
             {NavbarMenu.map((menu) => (
-              <li key={menu.id} className="text-xl">
+              <li key={menu.id} >
                 <a href={menu.link} className="inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold">
                   {menu.title}
                 </a>
               </li>
             ))}
+            <button>
+                <MdOutlineShoppingCart/>
+            </button>
           </ul>
         </div>
       </div>
