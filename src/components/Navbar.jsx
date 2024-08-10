@@ -49,7 +49,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button>
+            <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
                 <MdOutlineShoppingCart/>
             </button>
           </ul>
