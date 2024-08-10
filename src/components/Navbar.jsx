@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLeaf } from "react-icons/fa";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { MdMenu, MdOutlineShoppingCart } from "react-icons/md";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 const NavbarMenu = [
   {
@@ -43,18 +44,25 @@ const Navbar = () => {
         <div className="hidden md:block ">
           <ul className="flex items-center gap-6 text-gray-600">
             {NavbarMenu.map((menu) => (
-              <li key={menu.id} >
-                <a href={menu.link} className="inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold">
+              <li key={menu.id}>
+                <a
+                  href={menu.link}
+                  className="inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold"
+                >
                   {menu.title}
                 </a>
               </li>
             ))}
             <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
-                <MdOutlineShoppingCart/>
+              <MdOutlineShoppingCart />
             </button>
           </ul>
         </div>
         {/* Mobile Hamburger menu section */}
+        <div className="md:hidden">
+          <MdMenu className="text-4xl" />
+          <ResponsiveMenu />
+        </div>
       </div>
     </nav>
   );
