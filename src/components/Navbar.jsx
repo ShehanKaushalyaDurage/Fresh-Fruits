@@ -32,7 +32,7 @@ const NavbarMenu = [
 ];
 
 const Navbar = () => {
-  const [open, setopen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   return (
     <>
       <nav>
@@ -62,13 +62,13 @@ const Navbar = () => {
             </ul>
           </div>
           {/* Mobile Hamburger menu section */}
-          <div className="md:hidden">
+          <div className="md:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl" />
           </div>
         </div>
       </nav>
        {/* Mobile menu section */}
-      <ResponsiveMenu />
+      <ResponsiveMenu open={open} />
     </>
   );
 };
