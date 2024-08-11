@@ -72,13 +72,15 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Hamburger menu section */}
-          
+
           <div className="md:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl" />
           </div>
         </motion.div>
       </nav>
+
       {/* Mobile menu section */}
+      
       <ResponsiveMenu open={open} />
     </>
   );
