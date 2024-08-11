@@ -60,11 +60,13 @@ const Menus = () => {
                 whileInView={"visible"}
                 whileHover={{scale: 1.1}}
                 className="bg-white rounded-3xl px-4 py-2 shadow-[0_0_22px_0_rgba(0,0,0,0.15)] flex flex-row justify-around items-center gap-3">
+                 
                     <img src={menu.img} className="w-[60px] mb-4 scale-110 transform -translate-y-6"/>
                     <div>
                         <h1 className="text-lg font-semibold">{menu.title}</h1>
                         <p className="text-lg font-semibold text-secondary">{menu.price}</p>
                     </div>
+              
                 </motion.div>
             ))}
         </div>
