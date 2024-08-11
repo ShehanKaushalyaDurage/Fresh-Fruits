@@ -6,6 +6,7 @@ import Fruit4 from "../assets/fruits/cherry.png";
 import { motion } from "framer-motion";
 import { FadeLeft } from "../utility/animation";
 
+
 const menusData = [
   {
     id: 1,
