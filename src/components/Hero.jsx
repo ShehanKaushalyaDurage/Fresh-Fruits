@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
 
         {/* Hero Images */}
-        
+
         <div className="flex justify-center items-center overflow-y-hidden overflow-x-hidden">
           <motion.img
             initial={{ opacity: 0, x: 200, rotate: 75 }}
@@ -68,6 +68,7 @@ const Hero = () => {
             className="w-[350px] md:w-[550px] drop-shadow"
           />
         </div>
+        
         <div className="absolute top-14 md:top-0 right-1/2 blur-sm opacity-80 rotate-[40deg]">
           <motion.img
             initial={{ opacity: 0, x: -200, rotate: 75 }}
