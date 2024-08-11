@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
 
           {/* menu section */}
-          
+
           <div className="hidden md:block ">
             <ul className="flex items-center gap-6 text-gray-600">
               {NavbarMenu.map((menu) => (
@@ -70,7 +70,9 @@ const Navbar = () => {
               </button>
             </ul>
           </div>
+
           {/* Mobile Hamburger menu section */}
+          
           <div className="md:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl" />
           </div>
