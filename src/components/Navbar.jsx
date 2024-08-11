@@ -32,6 +32,7 @@ const NavbarMenu = [
   },
 ];
 
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
