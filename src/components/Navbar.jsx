@@ -32,19 +32,19 @@ const NavbarMenu = [
   },
 ];
 
-
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <>
       <nav>
         <motion.div
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="container flex justify-between items-center py-4 md:pt-1"
         >
           {/* logo section */}
+
           <div className="text-2xl flex items-center gap-2 font-bold uppercase">
             <p className="text-primary ">Fruit</p>
             <p className="text-secondary">Store</p>
