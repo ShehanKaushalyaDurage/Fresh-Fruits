@@ -50,7 +50,9 @@ const Navbar = () => {
             <p className="text-secondary">Store</p>
             <FaLeaf className="text-green-500" />
           </div>
+
           {/* menu section */}
+          
           <div className="hidden md:block ">
             <ul className="flex items-center gap-6 text-gray-600">
               {NavbarMenu.map((menu) => (
