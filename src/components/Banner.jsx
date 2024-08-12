@@ -1,14 +1,14 @@
 import React from "react";
 import BannerPng from "../assets/fruits-splash.png";
 import { motion } from "framer-motion";
-import { FadeUp, FadeLeft } from "../utility/animation";
+import { FadeUp } from "../utility/animation";
 
 const Banner = () => {
   return (
     <section>
-      <div className="container">
+      <div className="container grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 py-14">
         {/* banner image */}
-        <div>
+        <div className="flex justify-center items-center">
           <img
             src={BannerPng}
             className="w-[300px] md:max-w-[400px] h-full object-cover"
@@ -31,7 +31,7 @@ const Banner = () => {
               aliquam incidunt quam voluptatem.
             </p>
             <motion.div
-              variants={FadeLeft(1.5)}
+              variants={FadeUp(1.5)}
               initial="hidden"
               animate="visible"
               className="flex justify-center md:justify-start"
