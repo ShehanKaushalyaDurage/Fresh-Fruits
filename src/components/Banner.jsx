@@ -1,8 +1,7 @@
 import React from "react";
 import BannerPng from "../assets/fruits-splash.png";
 import { motion } from "framer-motion";
-import { FadeUp, FadeRight } from "../utility/animation";
-import { IoBagHandleOutline } from "react-icons/io5";
+import { FadeUp, FadeLeft } from "../utility/animation";
 
 const Banner = () => {
   return (
@@ -32,15 +31,12 @@ const Banner = () => {
               aliquam incidunt quam voluptatem.
             </p>
             <motion.div
-              variants={FadeRight(1.5)}
+              variants={FadeLeft(1.5)}
               initial="hidden"
               animate="visible"
               className="flex justify-center md:justify-start"
             >
-              <button className="primary-btn flex items-center gap-2">
-                <span>
-                  <IoBagHandleOutline />{" "}
-                </span>
+              <button className="primary-btn ">
                 Learn more
               </button>
             </motion.div>
