@@ -6,7 +6,7 @@ import { FadeUp } from "../utility/animation";
 const BAnnerTwo = () => {
   return (
     <section className="mt-10">
-      <div className="container grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 py-14 overflow-y-hidden">
+      <div className="container grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 py-14 md:py-24 overflow-x-hidden overflow-y-hidden">
         
         {/* brand info */}
         <div className="flex flex-col justify-center ">
@@ -55,12 +55,12 @@ const BAnnerTwo = () => {
         {/* banner image */}
         <div className="flex justify-center items-center">
           <motion.img
-          initial={{opacity:0, scale: 0.5}}
-          whileInView={{opacity:1,scale:1}}
-          transition={{type:"spring",stiffness:100,delay:0.2}}
+          initial={{opacity:0, x:200 , rotate:75}}
+          whileInView={{opacity:1,x:0,rotate:0}}
+          transition={{duration:1, delay:0.2}}
           viewport={{once:true}}
             src={BannerPng}
-            className="w-[300px] md:max-w-[400px] h-full object-cover"
+            className="w-[400px] md:max-w-[400px] h-full object-cover drop-shadow"
           />
         </div>
       </div>
