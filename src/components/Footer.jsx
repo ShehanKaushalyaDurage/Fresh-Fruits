@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
-  )
-}
+    <footer>
+      <div className="container flex justify-between items-center">
+        {/* logo section */}
+        <div></div>
+        {/* social section */}
+        <div></div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
